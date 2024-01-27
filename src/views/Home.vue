@@ -3,7 +3,10 @@ import { ref } from "vue";
 
 const number1 = ref(0);
 const number2 = ref(0);
-
+const result = ref(0);
+const addition = () => {
+  result.value = +number1.value + +number2.value;
+};
 </script>
 <template>
   <div
@@ -26,6 +29,17 @@ const number2 = ref(0);
         type="text"
       />
     </div>
-    <p>Result text is: {{ (+number1) + (+number2) }}</p>
+    <button
+      class="btn btn-accent"
+      type="submit"
+      @click="addition"
+      :disabled="!number1 || !number2"
+    >
+      Tambah
+    </button>
+    <p>
+      Result:
+      {{ result }}
+    </p>
   </div>
 </template>

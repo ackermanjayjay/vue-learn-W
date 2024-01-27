@@ -1,10 +1,10 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import Navbar from "./components/Navbar.vue";
+import NavbarVue from './components/Navbar.vue';
+import HomeVue from './views/Home.vue';
 </script>
 
 <template>
-  <Navbar></Navbar>
-  <HelloWorld></HelloWorld>
+  <NavbarVue></NavbarVue>
+  <HomeVue></HomeVue>
 </template>
 
